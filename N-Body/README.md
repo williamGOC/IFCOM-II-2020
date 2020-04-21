@@ -40,3 +40,33 @@ body object: M = 200.0, R = (0.0, 3.0), V = (0.0, 0.0)
 F_12 = f_12 * M_1 = [-10606.6017178  10606.6017178]
 F_21 = f_21 * M_2 = [ 10606.6017178 -10606.6017178]
 ```
+We can also set the position and speed of a body using some methods of the body class
+ ```python
+ from pybody import body
+ import numpy as np
+ 
+ def main():
+  pass
+  
+  # body mass
+  M = 150.0
+  
+  # body position
+  R = np.array([1, 2], dtype=float)
+  
+  # creation of two body type objects
+  star = body(M, R)
+  
+  print("The body is in the position R = {}, and has velocity V = {}\n".format(star.rVec, star.vVec))
+  
+  newR = np.array([2, 2], dtype=float)
+  newV = np.array([1,-1], dtype=float)
+  
+  star.setR(newR)
+  star.setV(newV)
+  
+  print("The body is in the position R = {}, and has velocity V = {}\n".format(star.rVec, star.vVec))
+  
+ if __name__ == '__main__':
+	main()
+ ```
