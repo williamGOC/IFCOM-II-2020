@@ -105,4 +105,10 @@ def stepRK4(X, F, h):
 	
 	return (K1 + 2 * (K2 + K3) + K4)/6
 ```
-In our problem we have to look for an alternative implementation of the algorithm. Firstly we have
+In our problem we have to look for an alternative implementation of the algorithm. Firstly we have,
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/37045478/79925935-06685500-8412-11ea-99e7-50f86219ce22.gif">
+</p>
+
+The above equations can be represented as a ```numpy array```. The next step is to build a function that is capable of offsetting the generalized coordinates of a body object.
