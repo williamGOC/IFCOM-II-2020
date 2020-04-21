@@ -20,6 +20,16 @@
   star_1 = body(M_1, R_1)
   star_2 = body(M_2, R_2)
   
+  # force between the bodies per mass
+  f_12 = star_1.gravitationForce(star_2)
+  f_21 = star_2.gravitationForce(star_1)
+
+   print(star_1)
+   print(star_2)
+
+   print("F_12 = f_12 * M_1 = {}".format(f_12 * star_1.mass))
+   print("F_21 = f_21 * M_2 = {}".format(f_21 * star_2.mass))
+  
  if __name__ == '__main__':
 	main()
  ```
