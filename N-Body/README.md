@@ -85,15 +85,14 @@ To solve the problem of N interacting bodies under the effects of gravitational 
   <img src="https://user-images.githubusercontent.com/37045478/79851559-ded6a580-839b-11ea-98fc-a398c7252e19.gif">
 </p>
 
-To solve this problem we will use the fourth order ```Runge-Kutta algorithm```. We must first decompose the entire system of ```N``` vector equations into one of ```2 x d x N``` scalar equations (here ```d``` is the dimension of the problem). Then we can notice that we are in the presence of a **Multivatiable Runge-Kutta Problem**.
+To solve this problem we will use the fourth order ```Runge-Kutta algorithm```. We must first decompose the entire system of ```N``` vector equations into one of ```2 x d x N``` scalar equations (here ```d``` is the dimension of the problem). Then we can notice that we are in the presence of a **Multi-variable Runge-Kutta Problem**.
 
 Suppose there are m variables x_1, ..., x_m each of which vary over time.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/37045478/79856874-50feb880-83a3-11ea-9b9d-51c1b0e99b82.gif">
 </p>
-Notice there are no derivatives on the right hand side of any of those equations, and there are only first derivatives on the left hand side. These equations can be summarized in vector form as
-
+Notice there are no derivatives on the right hand side of any of those equations, and there are only first derivatives on the left hand side. These equations can be summarized in vector form as   
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/37045478/79857888-d9ca2400-83a4-11ea-9fb5-55b678999dac.gif">
