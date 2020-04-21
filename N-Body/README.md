@@ -92,3 +92,9 @@ Suppose there are m variables x_1, ..., x_m each of which vary over time.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/37045478/79856874-50feb880-83a3-11ea-9b9d-51c1b0e99b82.gif">
 </p>
+Notice there are no derivatives on the right hand side of any of those equations, and there are only first derivatives on the left hand side. These equations can be summarized in vector form as
+
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/37045478/79857888-d9ca2400-83a4-11ea-9fb5-55b678999dac.gif">
+</p>
