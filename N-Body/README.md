@@ -76,3 +76,9 @@ The body is in the position R = [1. 2.], and has velocity V = [0. 0.]
 
 The body is in the position R = [2. 2.], and has velocity V = [ 1. -1.]
 ```
+Now that we are familiar with the ```body class```, let's see how we can solve the problem of the ```N interacting bodies```.
+
+### N-interacting bodies
+To solve the problem of N interacting bodies under the effects of gravitational attraction, it is necessary to solve the following system of differential equations
+
+<img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\large&space;\left\{\begin{matrix}&space;\dot{\vec{r}}=\vec{v}\\&space;\dot{\vec{v}}_{k}=\gamma\sum^{N}_{j\neq&space;k}m_{j}\dfrac{\vec{r}_{j}&space;-&space;\vec{r}_{k}}{\left&space;|&space;\vec{r}_{j}&space;-&space;\vec{r}_{k}&space;\right&space;|^{3}}&space;\end{matrix}\right." title="\large \left\{\begin{matrix} \dot{\vec{r}}=\vec{v}\\ \dot{\vec{v}}_{k}=\gamma\sum^{N}_{j\neq k}m_{j}\dfrac{\vec{r}_{j} - \vec{r}_{k}}{\left | \vec{r}_{j} - \vec{r}_{k} \right |^{3}} \end{matrix}\right." />
