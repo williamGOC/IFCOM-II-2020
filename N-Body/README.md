@@ -11,14 +11,14 @@
  	# body masses
  	M_1 = 150.0
  	M_2 = 200.0
-  
-	# body positions
-	R_1 = np.array([1, 2], dtype=float)
-	R_2 = np.array([0, 3], dtype=float)
   	
-	# creation of two body type objects
-	star_1 = body(M_1, R_1)
-  	star_2 = body(M_2, R_2)
+	    # body positions
+	    R_1 = np.array([1, 2], dtype=float)
+	    R_2 = np.array([0, 3], dtype=float)
+  	
+	    # creation of two body type objects
+	    star_1 = body(M_1, R_1)
+	    star_2 = body(M_2, R_2)
   
   	# force between the bodies per mass
   	f_12 = star_1.gravitationForce(star_2)
@@ -105,3 +105,4 @@ def stepRK4(X, F, h):
 	
 	return (K1 + 2 * (K2 + K3) + K4)/6
 ```
+In our problem we have to look for an alternative implementation of the algorithm. Firstly we have
