@@ -65,8 +65,14 @@ We can also set the position and speed of a body using some methods of the body 
   star.setR(newR)
   star.setV(newV)
   
-  print("The body is in the position R = {}, and has velocity V = {}\n".format(star.rVec, star.vVec))
+  print("The body is in the position R = {}, and has velocity V = {}".format(star.rVec, star.vVec))
   
  if __name__ == '__main__':
 	main()
  ```
+the output is:
+```console
+The body is in the position R = [1. 2.], and has velocity V = [0. 0.]
+
+The body is in the position R = [2. 2.], and has velocity V = [ 1. -1.]
+```
