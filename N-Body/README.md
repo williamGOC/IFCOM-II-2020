@@ -6,29 +6,29 @@
  import numpy as np
  
  def main():
-  pass
+ 	pass
   
-  # body masses
-  M_1 = 150.0
-  M_2 = 200.0
+ 	# body masses
+ 	M_1 = 150.0
+ 	M_2 = 200.0
   
-  # body positions
-  R_1 = np.array([1, 2], dtype=float)
-  R_2 = np.array([0, 3], dtype=float)
+	# body positions
+	R_1 = np.array([1, 2], dtype=float)
+	R_2 = np.array([0, 3], dtype=float)
+  	
+	# creation of two body type objects
+	star_1 = body(M_1, R_1)
+  	star_2 = body(M_2, R_2)
   
-  # creation of two body type objects
-  star_1 = body(M_1, R_1)
-  star_2 = body(M_2, R_2)
-  
-  # force between the bodies per mass
-  f_12 = star_1.gravitationForce(star_2)
-  f_21 = star_2.gravitationForce(star_1)
+  	# force between the bodies per mass
+  	f_12 = star_1.gravitationForce(star_2)
+  	f_21 = star_2.gravitationForce(star_1)
 
-   print(star_1)
-   print(star_2)
+   	print(star_1)
+   	print(star_2)
 
-   print("F_12 = f_12 * M_1 = {}".format(f_12 * star_1.mass))
-   print("F_21 = f_21 * M_2 = {}".format(f_21 * star_2.mass))
+   	print("F_12 = f_12 * M_1 = {}".format(f_12 * star_1.mass))
+   	print("F_21 = f_21 * M_2 = {}".format(f_21 * star_2.mass))
   
  if __name__ == '__main__':
 	main()
@@ -46,26 +46,26 @@ We can also set the position and speed of a body using some methods of the body 
  import numpy as np
  
  def main():
-  pass
+  	pass
   
-  # body mass
-  M = 150.0
+  	# body mass
+  	M = 150.0
   
-  # body position
-  R = np.array([1, 2], dtype=float)
+  	# body position
+  	R = np.array([1, 2], dtype=float)
   
-  # creation of two body type objects
-  star = body(M, R)
+  	# creation of two body type objects
+  	star = body(M, R)
   
-  print("The body is in the position R = {}, and has velocity V = {}\n".format(star.rVec, star.vVec))
+  	print("The body is in the position R = {}, and has velocity V = {}\n".format(star.rVec, star.vVec))
   
-  newR = np.array([2, 2], dtype=float)
-  newV = np.array([1,-1], dtype=float)
+  	newR = np.array([2, 2], dtype=float)
+  	newV = np.array([1,-1], dtype=float)
   
-  star.setR(newR)
-  star.setV(newV)
+  	star.setR(newR)
+  	star.setV(newV)
   
-  print("The body is in the position R = {}, and has velocity V = {}".format(star.rVec, star.vVec))
+  	print("The body is in the position R = {}, and has velocity V = {}".format(star.rVec, star.vVec))
   
  if __name__ == '__main__':
 	main()
@@ -87,13 +87,21 @@ To solve the problem of N interacting bodies under the effects of gravitational 
 
 To solve this problem we will use the fourth order ```Runge-Kutta algorithm```. We must first decompose the entire system of ```N``` vector equations into one of ```2 x d x N``` scalar equations (here ```d``` is the dimension of the problem). Then we can notice that we are in the presence of a **Multi-variable Runge-Kutta Problem**.
 
-Suppose there are m variables x_1, ..., x_m each of which vary over time.
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/37045478/79856874-50feb880-83a3-11ea-9b9d-51c1b0e99b82.gif">
-</p>
-Notice there are no derivatives on the right hand side of any of those equations, and there are only first derivatives on the left hand side. These equations can be summarized in vector form as   
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/37045478/79857888-d9ca2400-83a4-11ea-9fb5-55b678999dac.gif">
-</p>
+```python
+# Multi-variable Runge-Kutta algorithm.
+def stepRK4(X, F, h):
+	"""
+	Keyword Arguments:
+	X     --->  np.array
+	F     --->  np.array
+	h     --->  float
+	"""
+	pass
+	
+	K1 = h * F(X)
+	K2 = h * F(X + K1/2)
+	K3 = h * F(X + K2/2)
+	K4 = h * F(X + K3)
+	
+	return (K1 + 2 * (K2 + K3) + K4)/6
+```
