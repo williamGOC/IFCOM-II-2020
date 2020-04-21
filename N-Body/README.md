@@ -81,4 +81,9 @@ Now that we are familiar with the ```body class```, let's see how we can solve t
 ### N-interacting bodies
 To solve the problem of N interacting bodies under the effects of gravitational attraction, it is necessary to solve the following system of differential equations
 
-To solve this problem we will use the fourth order ```Runge-Kutta algorithm```.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/37045478/79851559-ded6a580-839b-11ea-98fc-a398c7252e19.gif">
+</p>
+
+To solve this problem we will use the fourth order ```Runge-Kutta algorithm```. We must first decompose the entire system of ```N``` vector equations into one of ```2 x d x N``` scalar equations (here ```d``` is the dimension of the problem).
+
