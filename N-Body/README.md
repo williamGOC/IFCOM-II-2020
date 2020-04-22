@@ -161,3 +161,8 @@ def adaptativePass(F, system, h, nbodies, prec=1e-6):
 ```console
 groot@iron:~$ python3 nBody.py >> name_output.dat
 ```
+Then the output data can be processed in the way we like best. In the case of the problem of the three bodies we have:
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/37045478/79939498-a84d6900-8435-11ea-9d8d-5eee67356e66.gif">
+</p>
