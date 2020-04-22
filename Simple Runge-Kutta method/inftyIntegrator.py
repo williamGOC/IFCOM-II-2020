@@ -50,7 +50,7 @@ def main():
     
     plt.figure(figsize=(12,9))
     plt.xlim(0.,8.)
-    plt.plot(t_rk4,x_rk4)
+    plt.plot(t_rk4,x_rk4) 
     plt.xlabel("t")
     plt.ylabel("x(t)")
     plt.show() 
