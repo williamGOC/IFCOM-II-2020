@@ -111,4 +111,4 @@ In our problem we have to look for an alternative implementation of the algorith
   <img src="https://user-images.githubusercontent.com/37045478/79925935-06685500-8412-11ea-99e7-50f86219ce22.gif">
 </p>
 
-The above equations can be represented as a ```numpy array```. The next step is to build a function that is capable of offsetting the generalized coordinates of a body object.
+The above equations can be represented as a ```numpy array```. The next step is to build a function that is capable of offsetting the generalized coordinates of a body object. For this, functions ```updateSystem``` and ```farceSystem``` were implemented, which are documented in the file ```nBody.py```. Finally, our implementation of the **Multi-variable Runge-Kutta** algorithm with ```adaptive steps``` is a simple extension of the one shown in classes for the case of a dimension.
