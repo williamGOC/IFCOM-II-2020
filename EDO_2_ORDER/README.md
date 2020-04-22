@@ -11,3 +11,7 @@ the general solution of this equation is given by.
   <img src="https://user-images.githubusercontent.com/37045478/79971027-2d527580-846a-11ea-82c7-deca44ba1ded.gif">
 </p>
 So let's take a look at some of the numerical solutions we can give to this problem.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/37045478/79975732-d355ae00-8471-11ea-8af3-ec187d7fc758.png">
+</p>
