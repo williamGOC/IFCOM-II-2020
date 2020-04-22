@@ -112,3 +112,48 @@ In our problem we have to look for an alternative implementation of the algorith
 </p>
 
 The above equations can be represented as a ```numpy array```. The next step is to build a function that is capable of offsetting the generalized coordinates of a body object. For this, functions ```updateSystem``` and ```farceSystem``` were implemented, which are documented in the file ```nBody.py```. Finally, our implementation of the **Multi-variable Runge-Kutta** algorithm with ```adaptive steps``` is a simple extension of the one shown in classes for the case of a dimension.
+```python
+def stepRK4(F, system, h, nbodies):
+	"""
+	Implementation of Runge-Kutta Algorithm of 4-order.
+
+	Keyword Arguments:
+	F      ---> N x 2 numpy array object with the generalized forces.
+	system ---> is a list object with each element as body object.
+        h      ---> float object.
+
+        Return: N x 2 numpy array object with the correction in generalized coordinates.
+	"""
+	pass
+	K1 = h * F(system)
+	K2 = h * F(farceSystem(system, K1/2, nbodies))
+	K3 = h * F(farceSystem(system, K2/2, nbodies))
+	K4 = h * F(farceSystem(system, K3, nbodies))
+	return (K1 + 2 * (K2 + K3) + K4)/6
+
+
+def adaptativePass(F, system, h, nbodies, prec=1e-6):
+	"""
+	Implementation of adaptive steps with interpolation.
+
+	Keyword Arguments:
+	F      ---> N x 2 numpy array object with the generalized forces.
+	system ---> is a list object with each element as body object.
+        h      ---> float object.
+
+        Return: tuple object.
+	"""
+	pass
+	rate = 1.0 + 1e-10
+	while rate >= 1.0 + 1e-10:
+		h /= rate
+		dX12 = stepRK4(F, system, h, nbodies)
+		dX1 = dX12 + stepRK4(F, farceSystem(system, dX12, nbodies), h, nbodies)
+		dX2 = stepRK4(F, system, 2*h, nbodies)
+		epsilon = (dX2 - dX1)/30
+		error = max([ np.linalg.norm(np.array(epsilon[k])) for k in range(nbodies)])
+		rate = (error/(h*prec))**0.25
+	h_approx = min(h/(rate+1e-10), 2*h)
+	dX = dX2 + (dX2-dX1)/15
+	return dX, 2*h, h_approx
+```
