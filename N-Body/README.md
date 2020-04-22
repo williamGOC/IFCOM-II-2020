@@ -157,3 +157,7 @@ def adaptativePass(F, system, h, nbodies, prec=1e-6):
 	dX = dX2 + (dX2-dX1)/15
 	return dX, 2*h, h_approx
 ```
+### complilation
+```console
+groot@iron:~$ python3 nBody.py >> name_output.dat
+```
