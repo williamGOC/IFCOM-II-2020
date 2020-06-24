@@ -18,4 +18,6 @@ plot sin(x**2) - x**3 w l lw 2 t ''
 ```
 and we obtain
 
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/37045478/79971027-2d527580-846a-11ea-82c7-deca44ba1ded.gif">
+</p>
