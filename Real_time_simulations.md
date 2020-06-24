@@ -1,1 +1,1 @@
-A powerful tool for real-time observation of our simulations is the ´´´gnuplot´´´ software (available for both Window and Linux).
+A powerful tool for real-time observation of our simulations is the ```gnuplot``` software (available for both Window and Linux).
