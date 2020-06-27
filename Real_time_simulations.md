@@ -37,8 +37,13 @@ def simplePlot():
   
   proc.stdin.write("set xlabel '{/=20 x}'\n".encode("utf-8"))
   proc.stdin.write("set ylabel '{/=20 y}' rotate by 0\n".encode("utf-8"))
-
-
+  
+   proc.stdin.write("set xrange [-1:1]\n".encode("utf-8"))
+   proc.stdin.write("set yrange [-1:1]\n".encode("utf-8"))
+   
+   proc.stdin.write("plot sin(x**2) - x**3 w l lw 2 t ''\n".encode("utf-8"))
+   
+   
 def main():
   pass
   
